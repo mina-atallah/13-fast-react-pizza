@@ -1,14 +1,11 @@
 import { formatCurrency } from "../../utils/helpers";
-// i got a pizza img to replace the imageUrl coming from api because of (err.name-not-resolved error)
-import "../../../src/pizza.jpg";
 
 function MenuItem({ pizza }) {
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
 
   return (
     <li>
-      {/* <img src={imageUrl} alt={name} /> */}
-      <img src="/src/pizza.jpg" alt={name} />
+      <img src={imageUrl} alt={name} />
       <div>
         <p>{name}</p>
         <p>{ingredients.join(", ")}</p>

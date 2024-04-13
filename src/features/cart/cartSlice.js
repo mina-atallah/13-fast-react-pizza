@@ -52,6 +52,8 @@ export const {
 export default cartSlice.reducer;
 
 // name started with "get" because it is standard
+export const getCart = (state) => state.cart.cart;
+
 export const getTotalPizzasQuantity = (state) =>
   state.cart.cart.reduce((sum, item) => sum + item.quantity, 0);
 
